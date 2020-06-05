@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/trist725/mggs/client"
 	"github.com/trist725/mggs/conf"
+	"github.com/trist725/mggs/gate"
 	"github.com/trist725/mggs/server"
 	leaf "github.com/trist725/myleaf"
 	lconf "github.com/trist725/myleaf/conf"
@@ -17,6 +18,7 @@ func main() {
 
 	leaf.Run(
 		client.Module,
+		gate.Module,
 		server.Module,
 	)
 }

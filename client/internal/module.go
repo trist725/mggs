@@ -3,6 +3,7 @@ package internal
 import (
 	"github.com/trist725/mggs/base"
 	"github.com/trist725/mggs/conf"
+	mgate "github.com/trist725/mggs/gate"
 	"github.com/trist725/mggs/msg"
 	"github.com/trist725/myleaf/gate"
 )
@@ -29,7 +30,7 @@ func (m *Module) OnInit() {
 		LenMsgLen:       conf.LenMsgLen,
 		LittleEndian:    conf.LittleEndian,
 		Processor:       msg.Processor,
-		//AgentChanRPC:    game.ChanRPC,
+		AgentChanRPC:    mgate.ChanRPC,
 	}
 
 }
