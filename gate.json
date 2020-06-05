@@ -1,0 +1,9 @@
+{
+  "LogLevel": "debug",
+  "TCPClientAddr": "[::]:7777",
+  "TCPServerAddr": "[::]:8888",
+  "MaxConnNum": 9999,
+  "ConsolePort": 3333,
+
+  "ProfilePath": "./profile"
+}
