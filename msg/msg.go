@@ -3,6 +3,7 @@ package msg
 import "github.com/trist725/myleaf/network/protobuf"
 
 var (
-	PH        = 0
-	Processor = protobuf.NewProcessor()
+	//前后端包不同的操作
+	ClientProcessor = protobuf.NewProcessor()
+	ServerProcessor = protobuf.NewProcessor()
 )

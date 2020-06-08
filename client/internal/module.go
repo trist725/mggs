@@ -29,8 +29,9 @@ func (m *Module) OnInit() {
 		TCPAddr:         conf.Gate.TCPClientAddr,
 		LenMsgLen:       conf.LenMsgLen,
 		LittleEndian:    conf.LittleEndian,
-		Processor:       msg.Processor,
+		Processor:       msg.ClientProcessor,
 		AgentChanRPC:    mgate.ChanRPC,
+		Mode:            1,
 	}
 
 }

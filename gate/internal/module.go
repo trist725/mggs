@@ -9,6 +9,7 @@ import (
 var (
 	skeleton = base.NewSkeleton()
 	ChanRPC  = skeleton.ChanRPCServer
+	gateWay  = NewGateway()
 )
 
 type Module struct {
