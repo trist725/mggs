@@ -6,18 +6,17 @@ import (
 )
 
 type Gateway struct {
-	servers map[gate.Agent]uint32
-	clients map[gate.Agent]uint64
+	servers map[gate.Agent]string
+	clients map[gate.Agent]int32
 
-	//server_agent-clients_agent
-	scMapper map[gate.Agent][]gate.Agent
+	scMapper map[gate.Agent]map[int32]gate.Agent
 }
 
 func NewGateway() *Gateway {
 	gateway := Gateway{
-		servers:  make(map[gate.Agent]uint32),
-		clients:  make(map[gate.Agent]uint64),
-		scMapper: make(map[gate.Agent][]gate.Agent),
+		servers:  make(map[gate.Agent]string),
+		clients:  make(map[gate.Agent]int32),
+		scMapper: make(map[gate.Agent]map[int32]gate.Agent),
 	}
 
 	return &gateway
