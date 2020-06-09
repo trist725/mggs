@@ -10,6 +10,8 @@ func init() {
 
 	skeleton.RegisterChanRPC("NewClient", rpcNewClient)
 	skeleton.RegisterChanRPC("NewServer", rpcNewServer)
+	skeleton.RegisterChanRPC("CloseClient", rpcCloseClient)
+	skeleton.RegisterChanRPC("CloseServer", rpcCloseServer)
 }
 
 func rpcNewAgent(args []interface{}) {
@@ -32,4 +34,14 @@ func rpcNewClient(args []interface{}) {
 func rpcNewServer(args []interface{}) {
 	a := args[0].(gate.Agent)
 	_ = a
+}
+
+func rpcCloseClient(args []interface{}) {
+	a := args[0].(gate.Agent)
+	a.Close()
+}
+
+func rpcCloseServer(args []interface{}) {
+	a := args[0].(gate.Agent)
+	a.Close()
 }
