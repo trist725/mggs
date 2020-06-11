@@ -55,10 +55,13 @@ func rpcNewServer(args []interface{}) {
 
 func rpcCloseClient(args []interface{}) {
 	a := args[0].(gate.Agent)
-	sa := a.UserData().(gate.Agent)
-	id := gateWay.clients[a]
+	if a.UserData() != nil {
+		sa := a.UserData().(gate.Agent)
+		id := gateWay.clients[a]
+		delete(gateWay.scMapper[sa], id)
+	}
 	delete(gateWay.clients, a)
-	delete(gateWay.scMapper[sa], id)
+
 	a.Close()
 }
 
