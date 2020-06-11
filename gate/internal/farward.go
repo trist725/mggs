@@ -1,6 +1,8 @@
 package internal
 
 import (
+	"github.com/trist725/mggs/conf"
+	"github.com/trist725/mgsu/util"
 	"github.com/trist725/myleaf/gate"
 	"github.com/trist725/myleaf/log"
 )
@@ -21,10 +23,10 @@ func ClientForward(args []interface{}) {
 
 	var sa gate.Agent
 	sa = a.UserData().(gate.Agent)
-	f := NewMsgFilter(msg, gateWay.clients[a])
-	sa.WriteMsg(f.do())
+	sa.WriteMsg([][]byte{util.Int32ToByteArr(gateWay.clients[a], conf.LittleEndian), msg})
 }
 
+//to client
 func ServerForward(args []interface{}) {
 	msg := args[0].(gate.Agent)
 	sa := args[1].(gate.Agent)
