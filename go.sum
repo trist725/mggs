@@ -18,8 +18,8 @@ github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e h1:fD57ERR4JtEqsWb
 github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e/go.mod h1:zD1mROLANZcx1PVRCS0qkT7pwLkGfwJo4zjcN/Tysno=
 github.com/rs/xid v1.2.1 h1:mhH9Nq+C1fY2l1XIpgxIiUOfNpRBYH1kKcr+qfKgjRc=
 github.com/rs/xid v1.2.1/go.mod h1:+uKXf+4Djp6Md1KODXJxgGQPKngRmWyn10oCKFzNHOQ=
-github.com/trist725/myleaf v0.0.0-20200609022419-c373a312ead8 h1:Hkjrkx0mv298Zp2YsW2m2HujwwYXCiun79H9VnLri40=
-github.com/trist725/myleaf v0.0.0-20200609022419-c373a312ead8/go.mod h1:5ImyI7IUeFrFlMkc5RkDtx4VUcyW2OHHSZOPW8csLIc=
+github.com/trist725/myleaf v0.0.0-20200611090727-21ef8b23bd36 h1:qn7LRRjHrQ7LhrCdWe/6mLio0vxK8AJBowGHAFQIKXQ=
+github.com/trist725/myleaf v0.0.0-20200611090727-21ef8b23bd36/go.mod h1:5ImyI7IUeFrFlMkc5RkDtx4VUcyW2OHHSZOPW8csLIc=
 golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543 h1:E7g+9GITq07hpfrRu66IVDexMakfv52eLZ2CXBWiKr4=
 golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543/go.mod h1:I/5z698sn9Ka8TeJc9MKroUUfqBBauWjQqLJ2OPfmY0=
 google.golang.org/protobuf v0.0.0-20200109180630-ec00e32a8dfd/go.mod h1:DFci5gLYBciE7Vtevhsrf46CRTquxDuWsQurQQe4oz8=
