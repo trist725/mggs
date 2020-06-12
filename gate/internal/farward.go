@@ -28,7 +28,7 @@ func ClientForward(args []interface{}) {
 
 //to client
 func ServerForward(args []interface{}) {
-	msg := args[0].(gate.Agent)
+	msg := args[0]
 	sa := args[1].(gate.Agent)
 	clientID := args[2].(int32)
 	if ca, ok := gateWay.scMapper[sa][clientID]; ok {
