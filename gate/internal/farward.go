@@ -21,8 +21,7 @@ func ClientForward(args []interface{}) {
 		return
 	}
 
-	var sa gate.Agent
-	sa = a.UserData().(gate.Agent)
+	sa := a.UserData().(gate.Agent)
 	sa.WriteMsg([][]byte{util.Int32ToByteArr(gateWay.clients[a], conf.LittleEndian), msg})
 }
 
