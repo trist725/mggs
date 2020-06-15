@@ -31,6 +31,11 @@ func rpcCloseAgent(args []interface{}) {
 func rpcNewClient(args []interface{}) {
 	a := args[0].(gate.Agent)
 	uuid := xid.New()
+	//保留0作为cmd
+	if 0 == uuid.Counter() {
+		a.Close()
+		return
+	}
 	//3字节计数器可能有1/2^24概率溢出?
 	gateWay.clients[a] = uuid.Counter()
 
